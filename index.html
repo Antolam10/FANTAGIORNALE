@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Fantagiornale
+    </title>
+    <body>
+        <h1 class="Fantagiornale">
+            Fantagiornale
+        </h1>
+        <h2 class="sottotitoli">
+            Ce l'ho fatta lagazzi
+        </h2>
+        <h3 class="container">
+            ARTICOLI
+        </h3>
+        <button class="Bottone" onclick="vaiAllaPagina()">
+            Articolo 1
+        </button>
+    </body>
+    <style>
+        .Fantagiornale {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 50px;
+            position: absolute;
+            top: 0%;
+            left: 45%;
+            color: green;
+        }
+        .sottotitoli {
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            top: 10%;
+        }
+        .container {
+            position: absolute;
+            top: 20%;
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .Bottone {
+            background-color: gold;
+            position: absolute;
+            top: 30%;
+            width: 250px;
+            height: 300px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+            border-radius: 10px;
+            border-color: gold;
+            border: none;
+            cursor:pointer;
+        }
+        .Bottone:hover {
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+    <script>
+        function vaiAllaPagina() {
+            window.location.href = "primo articolo.html"
+        }
+    </script>
+</html>
