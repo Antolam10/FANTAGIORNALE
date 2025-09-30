@@ -5,7 +5,7 @@
     </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <body>
-        <div style="background-color: rgb(31, 99, 131); height: 100px; width: 300%; border-radius: 10px;"></div>
+        <div style="background-color: rgb(31, 99, 131); height: 100px; width: 100%; border-radius: 10px;"></div>
         <h1 class="Fantagiornale">
             FANTAGIORNALE
         </h1>
@@ -14,13 +14,16 @@
             ARTICOLI
         </h3>
         <button class="classifica">
-            <i class="fas fa-bars", style="font-size: 90px;"></i>
+            <i class="fas fa-bars", style="font-size: 50px;"></i>
         </button>
         <button class="Bottone" onclick="vaiAllaPagina()">
             SCAM DELLA SOCIETÀ FC ETTANERA
         </button>
-        <button class="prima" onclick="vaiAllaPrima()">
+        <button class="primo" onclick="vaiAllaPrima()">
             LORENZO EL FUTBOL LUCCA SALVA LA GIORNATA A FREE CAIRO
+        </button>
+        <button class="secondo" onclick="vaiAllaSeconda()">
+            LAMBERTI ARE ON FIRE
         </button>
     </body>
     <style>
@@ -31,7 +34,7 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 100px;
             position: absolute;
-            top: -4%;
+            top: -8%;
             left: 1%;
             color: white;
 
@@ -41,8 +44,8 @@
             border: none;
             color: white;
             position: absolute;
-            top: 0.4%;
-            left: 285%;
+            top: 3.25%;
+            left: 95%;
             cursor: pointer;
         }
         .sottotitoli {
@@ -54,7 +57,7 @@
             position: absolute;
             top: 7%;
             font-size: 80px;
-            font-family: Verdana;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: rgb(31, 99, 131);
         }
         .Bottone {
@@ -65,7 +68,7 @@
             height: 1200px;
             color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 80px;
+            font-size: 30px;
             border-radius: 10px;
             border-color: rgb(31, 99, 131);
             border: none;
@@ -74,16 +77,31 @@
         .Bottone:hover {
             box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
         }
-        .prima {
+        .primo {
             background-color: rgb(31, 99, 131);
             position: absolute;
             top: 30%;
-            left: 125%;
+            left: 80%;
             width: 1000px;
             height: 1200px;
             color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 80px;
+            font-size: 30px;
+            border-radius: 10px;
+            border-color: rgb(31, 99, 131);
+            border: none;
+            cursor:pointer;
+        }
+        .secondo {
+            background-color: rgb(31, 99, 131);
+            position: absolute;
+            top: 30%;
+            left: 250%;
+            width: 1000px;
+            height: 1200px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
             border-radius: 10px;
             border-color: rgb(31, 99, 131);
             border: none;
@@ -101,14 +119,8 @@
         function vaiAllaPrima() {
             window.location.href = "prima.html"
         }
+        function vaiAllaSeconda() {
+            window.location.href = "secondo articolo.html"
+        }
     </script>
 </html>
-
-
-
-
-
-
-
-
-
