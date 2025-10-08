@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         Fantagiornale
     </title>
@@ -9,13 +10,20 @@
         <h1 class="Fantagiornale">
             FANTAGIORNALE
         </h1>
-
+        <button class="navbar">
+            <i class="fas fa-bars", style="font-size: 50px;"></i>
+        </button>
+        <nav class="nav">
+            <ul>
+                <li onclick="ForzaNapoli()">CLASSIFICA</li>
+                <li onclick="Ciao()">VIDEO</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
         <h3 class="container">
             ARTICOLI
         </h3>
-        <button class="classifica">
-            <i class="fas fa-bars", style="font-size: 50px;"></i>
-        </button>
         <button class="Bottone" onclick="vaiAllaPagina()">
             SCAM DELLA SOCIETÀ FC ETTANERA
         </button>
@@ -25,27 +33,66 @@
         <button class="secondo" onclick="vaiAllaSeconda()">
             LAMBERTI ARE ON FIRE
         </button>
+        <button class="terzo" onclick="vaiAllaSeconda()">
+            AC AFRAGOLESE RISPONDE ALLE CRITICHE
+        </button>
     </body>
     <style>
         body {
             background-color: rgb(231, 223, 208);
+            font-family: "Montserrat";
         }
         .Fantagiornale {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 100px;
             position: absolute;
-            top: -4%;
+            top: -8%;
             left: 1%;
             color: white;
-
+        }
+        .navbar {
+            padding: 10px;
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 90;
+            background: rgb(31, 99, 131);
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        nav {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgb(31, 99, 131);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10;
+            z-index: 69;
+            transition: .3s;
+            transform: translateX(-100%);
+        }
+        .wide {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style: none;
+            padding: 60px;
+        }
+        nav li {
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
         }
         .classifica {
             background-color: rgb(31, 99, 131);
             border: none;
             color: white;
             position: absolute;
-            top: 1%;
-            left: 90%;
+            top: 3.25%;
+            left: 95%;
             cursor: pointer;
         }
         .sottotitoli {
@@ -68,7 +115,7 @@
             height: 1200px;
             color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 80px;
+            font-size: 30px;
             border-radius: 10px;
             border-color: rgb(31, 99, 131);
             border: none;
@@ -81,12 +128,12 @@
             background-color: rgb(31, 99, 131);
             position: absolute;
             top: 30%;
-            left: 125%;
+            left: 80%;
             width: 1000px;
             height: 1200px;
             color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 80px;
+            font-size: 30px;
             border-radius: 10px;
             border-color: rgb(31, 99, 131);
             border: none;
@@ -101,15 +148,39 @@
             height: 1200px;
             color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 80px;
+            font-size: 30px;
             border-radius: 10px;
             border-color: rgb(31, 99, 131);
             border: none;
             cursor:pointer;
         }
-        
+        .terzo {
+            background-color: rgb(31, 99, 131);
+            position: absolute;
+            top: 30%;
+            left: 375%;
+            width: 1000px;
+            height: 1200px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            border-radius: 10px;
+            border-color: rgb(31, 99, 131);
+            border: none;
+            cursor:pointer;
+        }
+        .menù-principale {
+            display: none;
+            position: absolute;
+        }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        $(document).ready(function() {
+            $( ".navbar" ).click(function() {
+                $( ".nav" ).toggleClass( "wide" );
+            });
+        });
         function vaiAllaPagina() {
             window.location.href = "primo articolo.html"
         }
@@ -122,8 +193,14 @@
         function vaiAllaSeconda() {
             window.location.href = "secondo articolo.html"
         }
+        function ForzaNapoli() {
+            window.location.href = "classifica.html"
+        }
+        function Ciao() {
+            window.location.href = "video.html"
+        }
+        function Daje() {
+            window.location.href = "terzo.html"
+        }
     </script>
 </html>
-
-
-
