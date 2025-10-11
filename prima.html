@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <title>
         Fantagiornale
     </title>
@@ -15,7 +16,7 @@
             <img src="https://livesport-ott-images.ssl.cdn.cra.cz/r900xfq60/9ea8c03e-fbca-4896-abe7-76a3c7428741.jpeg"><br>
             La partita più combattuta è stata quella tra Davide e Simone, che ha esultato (ho le prove) del mezzo punto tolto a Canestrelli.
             Infatti questo punto ha deciso la partita, che è finita in parità tra i 2.<br>
-            <img class="Can" src="https://www.calciopisa.it/wp-content/uploads/2024/03/IPA_Agency_IPA44210640.jpg">
+            <img class="Can" src="https://www.calciopisa.it/wp-content/uploads/2024/03/IPA_Agency_IPA44210640.jpg"><br>
             AC Afragolese, anche se Rocco piange e dice che fa schifo la squadra, ha dimostrato di essere una delle favorite per il titolo, con un dominio netto su Amedeo (Amedeo, che stavi pensando all'asta?).
             Luigi, ovviamente, ha avuto il mazzo di incontrare Dario che ha fatto la sua prestazione, una delle peggiori prestazioni insieme quelle di Gennaro (non ti preoccupare, dopo parlo anche di te) e quella di Simone della scorsa giornata, con soli 58 punti.
             Infine abbiamo assistito alla più brutta partita finora del Fanta, con ZERO gol (ne ho fatti più io), ma che ha visto la vittoria di Nicolò contro Gennaro 67 a 62.
@@ -28,6 +29,29 @@
             Con questo Gais vi saluto, ci ho messo un mondo per scrivere questo (se non lo leggete vi trancio a SMAF) e FNS.
             PS: Rocco ricordati che anche se non vieni a SMAF, andiamo all'allenamento.
         </h3>
+        <div id="commenti">
+    <h2>Commenti</h2>
+    <form id="forma-commento">
+      <input id="testo-commento" placeholder="Scrivi un commento"></textarea>
+      <button id="invia-commento">Invia</button>
+    </form>
+    <div id="elenco-commenti">
+      <!-- Commenti verranno visualizzati qui -->
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("invia-commento").addEventListener("click", function(event) {
+      event.preventDefault();
+      var testoCommento = document.getElementById("testo-commento").value;
+      if (testoCommento !== "") {
+        var nuovoCommento = document.createElement("div");
+        nuovoCommento.innerText = testoCommento;
+        document.getElementById("elenco-commenti").appendChild(nuovoCommento);
+        document.getElementById("testo-commento").value = "";
+      }
+    });
+  </script>
         <style>
              body {
             background-color: white;
@@ -47,6 +71,36 @@
             width: 1000px;
             height: 700px;
         }
+    #commenti {
+      width: 500px;
+      font-family: "Montserrat";
+      border: none;
+    }
+    #forma-commento {
+      margin-bottom: 20px;
+      border: none;
+    }
+    #testo-commento {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      font-size: 16px;
+      font-family: "Montserrat";
+    }
+    #invia-commento {
+      background-color: rgb(31, 99, 131);
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: absolute;
+      top: 270%;
+      width: 200px;
+      height: 100px;
+      font-size: 30px;
+      font-family: "Montserrat";
+    }
         </style>
     </body>
 </html>
