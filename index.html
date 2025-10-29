@@ -4,6 +4,7 @@
         Fantagiornale
     </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <body>
         <h1 class="Fantagiornale">
             FANTAGIORNALE
@@ -19,8 +20,8 @@
         </nav>
         <div class="hero">
             <div class="hero__content">
-                <p class="intro">Intro Text</p>
-                <h1>Titolo</h1>
+                <p class="intro-text">Intro Text</p>
+                <h1 class="big-text">Titolo</h1>
                 <a href="" class="button1">Discover more</a>
             </div>
         </div>
@@ -42,9 +43,10 @@
         <button class="quarto" onclick="vaiAllaQuarta()">
             DISFATTA PER FREE CAIRO
         </button>
-        <button class="quinto" onclick="vaiAllaQuinta()">
-           LIVERPOLLI INFERMABILE (DICIAMO)
+        <button class="quinto" onclick="vaiAllaQuinta">
+            LUIGI INFERMABILE (DICIAMO)
         </button>
+        
     </body>
     <style>
         body {
@@ -52,12 +54,12 @@
             font-family: "Montserrat";
         }
         .Fantagiornale {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 100px;
+            font-family: "Montserrat";
+            font-size: 150px;
             position: absolute;
             top: -4%;
             left: 1%;
-            color: rgb(31, 99, 131);
+            color: white;
         }
         .navbar {
             padding: 10px;
@@ -112,15 +114,15 @@
         }
         .container {
             position: absolute;
-            top: 15%;
-            font-size: 80px;
+            top: 30%;
+            font-size: 120px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: rgb(31, 99, 131);
         }
         .Bottone {
             background-color: rgb(31, 99, 131);
             position: absolute;
-            top: 30%;
+            top: 45%;
             width: 1000px;
             height: 1200px;
             color: white;
@@ -137,7 +139,7 @@
         .primo {
             background-color: rgb(31, 99, 131);
             position: absolute;
-            top: 30%;
+            top: 45%;
             left: 125%;
             width: 1000px;
             height: 1200px;
@@ -152,7 +154,7 @@
         .secondo {
             background-color: rgb(31, 99, 131);
             position: absolute;
-            top: 30%;
+            top: 45%;
             left: 250%;
             width: 1000px;
             height: 1200px;
@@ -167,7 +169,7 @@
         .terzo {
             background-color: rgb(31, 99, 131);
             position: absolute;
-            top: 30%;
+            top: 45%;
             left: 375%;
             width: 1000px;
             height: 1200px;
@@ -182,7 +184,7 @@
         .quarto {
             background-color: rgb(31, 99, 131);
             position: absolute;
-            top: 30%;
+            top: 45%;
             left: 500%;
             width: 1000px;
             height: 1200px;
@@ -197,7 +199,7 @@
         .quinto {
             background-color: rgb(31, 99, 131);
             position: absolute;
-            top: 30%;
+            top: 45%;
             left: 675%;
             width: 1000px;
             height: 1200px;
@@ -212,11 +214,38 @@
         .menù-principale {
             display: none;
             position: absolute;
+        }
+        
+        .hero {
+            height: 600px;
+            display: flex;
+            width: 190%;
+            align-items: center;
+            background: linear-gradient(0deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.3) 70.71%), url("https://www.vesuviolive.it/wp-content/uploads/sites/6/2023/03/Lo-stadio-Diego-Armando-Maradona.jpeg");
+            background-size: cover;
+        }
+
+        .hero__content {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .hero__content h1,
+        .hero__content p{
+            color: white;
+        }
 
 
 
 
-             *,
+
+
+        .big-text{font-size: 70px; font-weight: 900;}
+        .med-text{font-size: 40px;}
+        .normal-text{font-size: 20px;}
+        .small-text{font-size: 14px;}
+
+        *,
         *:before,
         *:after {
             -webkit-box-sizing: border-box;
@@ -256,18 +285,10 @@
             window.location.href = "quarto.html"
         }
         function vaiAllaQuinta() {
-            window.location.href = "quinto.html"
+            window.location.href = "quarto.html"
         }
     </script>
 </html>
-
-
-
-
-
-
-
-
 
 
 
