@@ -29,43 +29,13 @@
             Con questo Gais vi saluto, ci ho messo un mondo per scrivere questo (se non lo leggete vi trancio a SMAF) e FNS.
             PS: Rocco ricordati che anche se non vieni a SMAF, andiamo all'allenamento.
         </h3>
-        <?php
-$conn = mysqli_connect("localhost", "root", "", "fantagiornale");
-
-if(!$conn) {
-    die("Connessione fallita: " . mysqli_connect_error());
-}
-
-if (isset($_POST["commento"])) {
-    $commento = $_POST["commento"];
-    $utente = $_POST["utente"];
-    $query = "INSERT INTO commenti (contenuto, utente) VALUES ('$commento', '$utente')";
-    mysqli_query($conn, $query);
-}
-
-$query = "SELECT * FROM commenti ORDER BY data DESC";
-$result = mysqli_query($conn, $query);
-?>
-        <form method="post">
-            <input type="text" name="utente" placeholder="Utente">
-            <textarea name="commento" placeholder="Scrivi un commento"></textarea>
-            <button type="submit">PUBBLICA</button>
-        </form>
-        <?php while ($row = mysqli_fetch_assoc($result)) {
-            ?> <div>
-                  <p><?php echo $row["utente"]; ?> - 
-                <?php echo $row["data"]; ?></p>
-                  <p><?php echo $row["contenuto"]; ?></p>
-               </div>
-               <?php } ?>
-        ?>
         <style>
              body {
             background-color: white;
         }
         .Fantagiornale {
             color: black;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: "Montserrat";
         }
         .Lucca {
             font-family: Arial, Helvetica, sans-serif;
@@ -80,4 +50,5 @@ $result = mysqli_query($conn, $query);
         }
         </style>
     </body>
+
 </html>
